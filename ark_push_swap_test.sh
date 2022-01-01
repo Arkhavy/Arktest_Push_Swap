@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/01 15:03:49 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/01 15:32:22 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,7 +69,7 @@ printf "=================================================="
 ###############################################################################
 
 x=1
-printf "\n3 digits combinations\n"
+printf $BOLD$UNDERLINE"\n3 digits combinations\n"$RESET
 while [ $x -le 6 ]
 do
 	COMB="$(sed -n ${x}p $D3)"
@@ -101,7 +101,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n4 digits combinations\n"
+printf $BOLD$UNDERLINE"\n4 digits combinations\n"$RESET
 while [ $x -le 24 ]
 do
 	COMB="$(sed -n ${x}p $D4)"
@@ -133,7 +133,7 @@ printf "\n"
 ###############################################################################
 
 x=1
-printf "\n5 digits combinations\n"
+printf $BOLD$UNDERLINE"\n5 digits combinations\n"$RESET
 while [ $x -le 120 ]
 do
 	COMB="$(sed -n ${x}p $D5)"
@@ -164,7 +164,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n6 digits combinations\n"
+printf $BOLD$UNDERLINE"\n6 digits combinations\n"$RESET
 while [ $x -le 720 ]
 do
 	COMB="$(sed -n ${x}p $D6)"
@@ -195,7 +195,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n10 digits combinations\n"
+printf $BOLD$UNDERLINE"\n10 digits combinations\n"$RESET
 while [ $x -le 1000 ]
 do
 	COMB="$(sed -n ${x}p $D10)"
@@ -226,7 +226,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n25 digits combinations\n"
+printf $BOLD$UNDERLINE"\n25 digits combinations\n"$RESET
 while [ $x -le 1000 ]
 do
 	COMB="$(sed -n ${x}p $D25)"
@@ -257,7 +257,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n100 digits combinations\n"
+printf $BOLD$UNDERLINE"\n100 digits combinations\n"$RESET
 while [ $x -le 1000 ]
 do
 	COMB="$(sed -n ${x}p $D100)"
@@ -300,7 +300,7 @@ done
 ###############################################################################
 
 x=1
-printf "\n500 digits combinations\n"
+printf $BOLD$UNDERLINE"\n500 digits combinations\n"$RESET
 while [ $x -le 1000 ]
 do
 	COMB="$(sed -n ${x}p $D500)"
