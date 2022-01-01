@@ -13,3 +13,5 @@ This tester is my first ever bash script, if something does not work correctly, 
 - All tests above 6 digits are made without proper tests on my end, if something doesn't work, it's my fault, not yours
 - I will add some flags in the future to do only some tests and not everything
 - I will add a trace in the future to show where it doesn't work and help solve your problems
+- Parsing errors tests, norm test and timeout tests are currently non existent, they will be added in the future
+- Any feedback is appreciated, any idea for more features too !
