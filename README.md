@@ -8,9 +8,9 @@ This tester is my first ever bash script, if something does not work correctly, 
 
 ## ATTENTION
 - The script is currently a Work In Progress
-- **The loop for 4 digits is somehow bugged, you might need to restart the script multiple times in order for it to work** *(Any idea on how to fix it is strongly appreciated)*
+- **The script might give you some random CKO, feel free to launch it again two or more times**
 - There is more than 4500 tests done, hope your body is ready *(and your terminal too)*
-- All tests above 6 digits are made without proper tests on my end, if something doesn't work, it's my fault, not yours
+- All tests above 6 digits are made without too much tests on my end, if something doesn't work, it's my fault, not yours
 - I will add some flags in the future to do only some tests and not everything
 - I will add a trace in the future to show where it doesn't work and help solve your problems
 - Parsing errors tests, norm test and timeout tests are currently non existent, they will be added in the future
