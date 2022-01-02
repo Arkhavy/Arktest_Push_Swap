@@ -3,9 +3,11 @@ This tester is my first ever bash script, if something does not work correctly, 
 
 ### How to use it ?
 1. git clone https://github.com/Arkhavy/Push_Swap_arktester.git where your binary is located
-2. cd Push_Swap_arktester
-3. bash ark_push_swap_test.sh
-4. Brace yourself
+2. Make sure your checker and your binary exist
+3. Rename the checker in the script if needed *(default is checker_Mac)*
+4. cd Push_Swap_arktester
+5. bash ark_push_swap_test.sh
+6. Brace yourself
 
 ![Arktester scores](https://cdn.discordapp.com/attachments/910254981377052682/927094846391472148/Screen_Shot_2022-01-02_at_8.03.26_AM.png)
 
