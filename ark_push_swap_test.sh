@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/01 17:13:01 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/02 08:09:37 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -339,12 +339,12 @@ do
 done
 
 printf "\n${BOLD}${UNDERLINE}SCORES$RESET\n"
-printf "${BOLD}3 digits$RESET	: $OK2 < 4 actions else $KO\n"
-printf "${BOLD}4 digits$RESET	: $OK2 < 8 actions else $KO\n"
-printf "${BOLD}5 digits$RESET	: $OK2 < 12 actions else $KO\n"
-printf "${BOLD}6 digits$RESET	: $OK2 < 27 actions else $KO\n"
-printf "${BOLD}10 digits$RESET	: $OK2 < 100 actions else $KO\n"
-printf "${BOLD}25 digits$RESET	: $OK2 < 250 actions else $KO\n"
+printf "${BOLD}3 digits$RESET	: $OK2 < 4 actions	else $KO\n"
+printf "${BOLD}4 digits$RESET	: $OK2 < 8 actions	else $KO\n"
+printf "${BOLD}5 digits$RESET	: $OK2 < 12 actions	else $KO\n"
+printf "${BOLD}6 digits$RESET	: $OK2 < 27 actions	else $KO\n"
+printf "${BOLD}10 digits$RESET	: $OK2 < 100 actions	else $KO\n"
+printf "${BOLD}25 digits$RESET	: $OK2 < 250 actions	else $KO\n"
 printf "${BOLD}100 digits$RESET	: $OK5 < 700	$OK4 < 900	$OK3 < 1100	$OK2 < 1300	$OK1 < 1500	else $KO\n"
 printf "${BOLD}500 digits$RESET	: $OK5 < 5500	$OK4 < 7000	$OK3 < 8500	$OK2 < 10000	$OK1 < 11500	else $KO\n"
 printf "${BOLD}Checker fail$RESET	: $CKO\n"
