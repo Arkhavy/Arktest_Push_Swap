@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/03 12:17:55 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/03 13:21:37 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -80,55 +80,55 @@ then
 	exit
 fi
 
-x=1
-stop=0
-printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
-while [ $x -le 16 ]
-do
-	COMB="$(sed -n ${x}p $D1)"
-	N="$($NAME $COMB)"
-	if [[ ! $N == "Error" ]]
-	then
-		printf "$x.$KO"
-		stop=1
-	else
-		printf "$x.$OK2"
-	fi
-	if [ $(($x % 5)) -eq 0 ]
-	then
-		printf "\n"
-	else
-		printf "	"
-	fi
-	x=$(($x + 1))
-done
-while [ $x -le 29 ]
-do
-	COMB="$(sed -n ${x}p $D1)"
-	N="$($NAME $COMB)"
-	if [[ $N == "Error" ]]
-	then
-		printf "$x.$KO"
-		stop=1
-	else
-		printf "$x.$OK2"
-	fi
-	if [ $(($x % 5)) -eq 0 ]
-	then
-		printf "\n"
-	else
-		printf "	"
-	fi
-	x=$(($x + 1))
-done
+# x=1
+# stop=0
+# printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
+# while [ $x -le 16 ]
+# do
+# 	COMB="$(sed -n ${x}p $D1)"
+# 	N="$($NAME $COMB)"
+# 	if [[ ! $N == "Error" ]]
+# 	then
+# 		printf "$x.$KO"
+# 		stop=1
+# 	else
+# 		printf "$x.$OK2"
+# 	fi
+# 	if [ $(($x % 5)) -eq 0 ]
+# 	then
+# 		printf "\n"
+# 	else
+# 		printf "	"
+# 	fi
+# 	x=$(($x + 1))
+# done
+# while [ $x -le 29 ]
+# do
+# 	COMB="$(sed -n ${x}p $D1)"
+# 	N="$($NAME $COMB)"
+# 	if [[ $N == "Error" ]]
+# 	then
+# 		printf "$x.$KO"
+# 		stop=1
+# 	else
+# 		printf "$x.$OK2"
+# 	fi
+# 	if [ $(($x % 5)) -eq 0 ]
+# 	then
+# 		printf "\n"
+# 	else
+# 		printf "	"
+# 	fi
+# 	x=$(($x + 1))
+# done
 
-if [ $stop -eq 1 ]
-then
-	printf $BOLD"\nBetter check those errors before starting real tests !\n"$RESET
-	exit
-else
-	printf "\n"
-fi
+# if [ $stop -eq 1 ]
+# then
+# 	printf $BOLD"\nBetter check those errors before starting real tests !\n"$RESET
+# 	exit
+# else
+# 	printf "\n"
+# fi
 
 ###############################################################################
 #							3 digits combinations
