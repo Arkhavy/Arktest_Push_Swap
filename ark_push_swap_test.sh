@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/02 08:09:37 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/03 11:04:10 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 # Just a script to test combinations of digits for Push_Swap
 
 NAME="../push_swap"
-CHECKER="../checker_Mac"
+CHECKER="./checker_Mac"
 
 # colors
 BLACK="\e[30m"
