@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/03 11:04:10 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/03 12:17:55 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -49,6 +49,7 @@ KO=$RED"KO"$RESET
 CKO=$FAINT$RED"CKO"$RESET
 
 # files
+D1="comb/parsing_tests.txt"
 D3="comb/3digits_combinations.txt"
 D4="comb/4digits_combinations.txt"
 D5="comb/5digits_combinations.txt"
@@ -63,6 +64,71 @@ clear
 printf "=================================================="
 printf "$BOLD\nARK PUSH SWAP TESTER START\n$RESET"
 printf "=================================================="
+
+###############################################################################
+#							Parsing tests
+###############################################################################
+
+if [ ! -f $NAME ]
+then
+	printf $BOLD"\n\nNo binary found !\n"$RESET
+	exit
+fi
+if [ ! -f $CHECKER ]
+then
+	printf $BOLD"\n\nNo checker found !\n"$RESET
+	exit
+fi
+
+x=1
+stop=0
+printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
+while [ $x -le 16 ]
+do
+	COMB="$(sed -n ${x}p $D1)"
+	N="$($NAME $COMB)"
+	if [[ ! $N == "Error" ]]
+	then
+		printf "$x.$KO"
+		stop=1
+	else
+		printf "$x.$OK2"
+	fi
+	if [ $(($x % 5)) -eq 0 ]
+	then
+		printf "\n"
+	else
+		printf "	"
+	fi
+	x=$(($x + 1))
+done
+while [ $x -le 29 ]
+do
+	COMB="$(sed -n ${x}p $D1)"
+	N="$($NAME $COMB)"
+	if [[ $N == "Error" ]]
+	then
+		printf "$x.$KO"
+		stop=1
+	else
+		printf "$x.$OK2"
+	fi
+	if [ $(($x % 5)) -eq 0 ]
+	then
+		printf "\n"
+	else
+		printf "	"
+	fi
+	x=$(($x + 1))
+done
+
+if [ $stop -eq 1 ]
+then
+	printf $BOLD"\nBetter check those errors before starting real tests !\n"$RESET
+	exit
+else
+	printf "\n"
+fi
 
 ###############################################################################
 #							3 digits combinations
@@ -143,7 +209,7 @@ do
 	then
 		printf "$x.$CKO"
 	else
-		if [ $N -lt 12 ]
+		if [ $N -lt 13 ]
 		then
 			printf "$x.$OK2"
 		else
