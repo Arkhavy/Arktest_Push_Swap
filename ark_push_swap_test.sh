@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/03 13:21:37 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/04 13:37:38 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,8 @@ D10="comb/10digits_combinations.txt"
 D25="comb/25digits_combinations.txt"
 D100="comb/100digits_combinations.txt"
 D500="comb/500digits_combinations.txt"
+DOUT="comb/st_out.txt"
+DERR="comb/st_err.txt"
 
 clear
 
@@ -80,55 +82,87 @@ then
 	exit
 fi
 
-# x=1
-# stop=0
-# printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
-# while [ $x -le 16 ]
-# do
-# 	COMB="$(sed -n ${x}p $D1)"
-# 	N="$($NAME $COMB)"
-# 	if [[ ! $N == "Error" ]]
-# 	then
-# 		printf "$x.$KO"
-# 		stop=1
-# 	else
-# 		printf "$x.$OK2"
-# 	fi
-# 	if [ $(($x % 5)) -eq 0 ]
-# 	then
-# 		printf "\n"
-# 	else
-# 		printf "	"
-# 	fi
-# 	x=$(($x + 1))
-# done
-# while [ $x -le 29 ]
-# do
-# 	COMB="$(sed -n ${x}p $D1)"
-# 	N="$($NAME $COMB)"
-# 	if [[ $N == "Error" ]]
-# 	then
-# 		printf "$x.$KO"
-# 		stop=1
-# 	else
-# 		printf "$x.$OK2"
-# 	fi
-# 	if [ $(($x % 5)) -eq 0 ]
-# 	then
-# 		printf "\n"
-# 	else
-# 		printf "	"
-# 	fi
-# 	x=$(($x + 1))
-# done
+x=1
+stop=0
+printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
+while [ $x -le 16 ] # Error\n on stderr, nothing on stdout or KO
+do
+	COMB="$(sed -n ${x}p $D1)"
+	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
+	CDOUT="$(sed -n 1p $DOUT)"
+	CDERR="$(sed -n 1p $DERR)"
+	if [[ -n $CDOUT || ! $CDERR == "Error" ]]
+	then
+		printf "$x.$KO"
+		stop=1
+	else
+		printf "$x.$OK2"
+	fi
+	if [ $(($x % 5)) -eq 0 ]
+	then
+		printf "\n"
+	else
+		printf "	"
+	fi
+	x=$(($x + 1))
+done
+rm $DOUT $DERR
 
-# if [ $stop -eq 1 ]
-# then
-# 	printf $BOLD"\nBetter check those errors before starting real tests !\n"$RESET
-# 	exit
-# else
-# 	printf "\n"
-# fi
+x=17
+while [ $x -le 21 ] # Something on stdout, nothing on stderr or KO
+do
+	COMB="$(sed -n ${x}p $D1)"
+	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
+	CDOUT="$(sed -n 1p $DOUT)"
+	CDERR="$(sed -n 1p $DERR)"
+	if [[ -z $CDOUT || -n $CDERR ]]
+	then
+		printf "$x.$KO"
+		stop=1
+	else
+		printf "$x.$OK2"
+	fi
+	if [ $(($x % 5)) -eq 0 ]
+	then
+		printf "\n"
+	else
+		printf "	"
+	fi
+	x=$(($x + 1))
+done
+rm $DOUT $DERR
+
+x=22
+while [ $x -le 29 ] # nothing on both or KO
+do
+	COMB="$(sed -n ${x}p $D1)"
+	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
+	CDOUT="$(sed -n 1p $DOUT)"
+	CDERR="$(sed -n 1p $DERR)"
+	if [[ -n $CDOUT || -n $CDERR ]]
+	then
+		printf "$x.$KO"
+		stop=1
+	else
+		printf "$x.$OK2"
+	fi
+	if [ $(($x % 5)) -eq 0 ]
+	then
+		printf "\n"
+	else
+		printf "	"
+	fi
+	x=$(($x + 1))
+done
+rm $DOUT $DERR
+
+if [ $stop -eq 1 ]
+then
+	printf $BOLD"\nBetter check those errors before starting real tests !\n"$RESET
+	exit
+else
+	printf "\n"
+fi
 
 ###############################################################################
 #							3 digits combinations
