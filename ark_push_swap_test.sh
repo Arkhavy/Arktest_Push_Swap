@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/05 12:11:14 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/05 16:55:01 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -86,7 +86,7 @@ fi
 x=1
 stop=0
 printf $BOLD$UNDERLINE"\n\nParsing tests\n"$RESET
-while [ $x -le 16 ] # Error\n on stderr, nothing on stdout or KO
+while [ $x -le 20 ] # Error\n on stderr, nothing on stdout or KO
 do
 	COMB="$(sed -n ${x}p $D1)"
 	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
@@ -99,7 +99,7 @@ do
 	else
 		printf "$x.$OK2"
 	fi
-	if [ $(($x % 5)) -eq 0 ]
+	if [ $(($x % 10)) -eq 0 ]
 	then
 		printf "\n"
 	else
@@ -109,21 +109,21 @@ do
 done
 rm $DOUT $DERR
 
-x=17
-while [ $x -le 21 ] # Something on stdout, nothing on stderr or KO
+x=21
+while [ $x -le 33 ] # Nothing on stderr or KO
 do
 	COMB="$(sed -n ${x}p $D1)"
 	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
 	CDOUT="$(sed -n 1p $DOUT)"
 	CDERR="$(sed -n 1p $DERR)"
-	if [[ -z $CDOUT || -n $CDERR ]]
+	if [[ -n $CDERR ]]
 	then
 		printf "$x.$KO"
 		stop=1
 	else
 		printf "$x.$OK2"
 	fi
-	if [ $(($x % 5)) -eq 0 ]
+	if [ $(($x % 10)) -eq 0 ]
 	then
 		printf "\n"
 	else
@@ -133,8 +133,8 @@ do
 done
 rm $DOUT $DERR
 
-x=22
-while [ $x -le 29 ] # nothing on both or KO
+x=34
+while [ $x -le 42 ] # nothing on both or KO
 do
 	COMB="$(sed -n ${x}p $D1)"
 	N="$($NAME $COMB 1>$DOUT 2>$DERR)"
@@ -147,7 +147,7 @@ do
 	else
 		printf "$x.$OK2"
 	fi
-	if [ $(($x % 5)) -eq 0 ]
+	if [ $(($x % 10)) -eq 0 ]
 	then
 		printf "\n"
 	else
