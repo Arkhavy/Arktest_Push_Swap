@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/04 13:37:38 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/05 11:44:24 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ OK3=$CYAN"OK"$RESET
 OK2=$GREEN"OK"$RESET
 OK1=$YELLOW"OK"$RESET
 KO=$RED"KO"$RESET
+TMI=$RED"TMI"$RESET
 CKO=$FAINT$RED"CKO"$RESET
 
 # files
@@ -183,7 +184,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $x -eq 6 ]
@@ -215,7 +216,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -247,7 +248,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -278,7 +279,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -309,7 +310,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -340,7 +341,7 @@ do
 		then
 			printf "$x.$OK2"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -383,7 +384,7 @@ do
 		then
 			printf "$x.$OK1"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -426,7 +427,7 @@ do
 		then
 			printf "$x.$OK1"
 		else
-			printf "$x.$KO"
+			printf "$x.$TMI"
 		fi
 	fi
 	if [ $(($x % 10)) -eq 0 ]
@@ -439,12 +440,13 @@ do
 done
 
 printf "\n${BOLD}${UNDERLINE}SCORES$RESET\n"
-printf "${BOLD}3 digits$RESET	: $OK2 < 4 actions	else $KO\n"
-printf "${BOLD}4 digits$RESET	: $OK2 < 8 actions	else $KO\n"
-printf "${BOLD}5 digits$RESET	: $OK2 < 12 actions	else $KO\n"
-printf "${BOLD}6 digits$RESET	: $OK2 < 27 actions	else $KO\n"
-printf "${BOLD}10 digits$RESET	: $OK2 < 100 actions	else $KO\n"
-printf "${BOLD}25 digits$RESET	: $OK2 < 250 actions	else $KO\n"
-printf "${BOLD}100 digits$RESET	: $OK5 < 700	$OK4 < 900	$OK3 < 1100	$OK2 < 1300	$OK1 < 1500	else $KO\n"
-printf "${BOLD}500 digits$RESET	: $OK5 < 5500	$OK4 < 7000	$OK3 < 8500	$OK2 < 10000	$OK1 < 11500	else $KO\n"
+printf "${BOLD}3 digits$RESET	: $OK2 < 4 actions	else $TMI\n"
+printf "${BOLD}4 digits$RESET	: $OK2 < 8 actions	else $TMI\n"
+printf "${BOLD}5 digits$RESET	: $OK2 < 12 actions	else $TMI\n"
+printf "${BOLD}6 digits$RESET	: $OK2 < 27 actions	else $TMI\n"
+printf "${BOLD}10 digits$RESET	: $OK2 < 100 actions	else $TMI\n"
+printf "${BOLD}25 digits$RESET	: $OK2 < 250 actions	else $TMI\n"
+printf "${BOLD}100 digits$RESET	: $OK5 < 700	$OK4 < 900	$OK3 < 1100	$OK2 < 1300	$OK1 < 1500	else $TMI\n"
+printf "${BOLD}500 digits$RESET	: $OK5 < 5500	$OK4 < 7000	$OK3 < 8500	$OK2 < 10000	$OK1 < 11500	else $TMI\n"
 printf "${BOLD}Checker fail$RESET	: $CKO\n"
+printf "${BOLD}Too Much Iteration$RESET	: $TMI\n"
