@@ -14,7 +14,7 @@ Each test has a number assigned to it. You can then check the corresponding line
 *Example : if you KO on test 8 of the Parsing test, you can go in **comb/parsing_test.txt** and check line 8 manually*
 *I will add in the future a file that will get all combinations that gives you a KO / CKO so you don't have to check things the hard way ;)*
 
-![Arktester scores](https://cdn.discordapp.com/attachments/910254981377052682/927094846391472148/Screen_Shot_2022-01-02_at_8.03.26_AM.png)
+![Arktester scores](https://cdn.discordapp.com/attachments/910254981377052682/928245366279782430/Screen_Shot_2022-01-05_at_12.15.13_PM.png)
 
 ## ATTENTION
 - The script is currently a Work In Progress
