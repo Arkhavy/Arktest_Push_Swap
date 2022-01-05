@@ -6,7 +6,7 @@
 #    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/05 11:44:24 by ljohnson         ###   ########lyon.fr    #
+#    Updated: 2022/01/05 12:09:43 by ljohnson         ###   ########lyon.fr    #
 #                                                                              #
 # **************************************************************************** #
 
@@ -440,13 +440,13 @@ do
 done
 
 printf "\n${BOLD}${UNDERLINE}SCORES$RESET\n"
-printf "${BOLD}3 digits$RESET	: $OK2 < 4 actions	else $TMI\n"
-printf "${BOLD}4 digits$RESET	: $OK2 < 8 actions	else $TMI\n"
-printf "${BOLD}5 digits$RESET	: $OK2 < 12 actions	else $TMI\n"
-printf "${BOLD}6 digits$RESET	: $OK2 < 27 actions	else $TMI\n"
-printf "${BOLD}10 digits$RESET	: $OK2 < 100 actions	else $TMI\n"
-printf "${BOLD}25 digits$RESET	: $OK2 < 250 actions	else $TMI\n"
-printf "${BOLD}100 digits$RESET	: $OK5 < 700	$OK4 < 900	$OK3 < 1100	$OK2 < 1300	$OK1 < 1500	else $TMI\n"
-printf "${BOLD}500 digits$RESET	: $OK5 < 5500	$OK4 < 7000	$OK3 < 8500	$OK2 < 10000	$OK1 < 11500	else $TMI\n"
-printf "${BOLD}Checker fail$RESET	: $CKO\n"
-printf "${BOLD}Too Much Iteration$RESET	: $TMI\n"
+printf "${BOLD}3 digits$RESET		: $OK2 < 4 actions\n"
+printf "${BOLD}4 digits$RESET		: $OK2 < 8 actions\n"
+printf "${BOLD}5 digits$RESET		: $OK2 < 12 actions\n"
+printf "${BOLD}6 digits$RESET		: $OK2 < 27 actions\n"
+printf "${BOLD}10 digits$RESET		: $OK2 < 100 actions\n"
+printf "${BOLD}25 digits$RESET		: $OK2 < 250 actions\n"
+printf "${BOLD}100 digits$RESET		: $OK5 < 700	$OK4 < 900	$OK3 < 1100	$OK2 < 1300	$OK1 < 1500\n"
+printf "${BOLD}500 digits$RESET		: $OK5 < 5500	$OK4 < 7000	$OK3 < 8500	$OK2 < 10000	$OK1 < 11500\n"
+printf "${BOLD}Checker fail$RESET		: $CKO\n"
+printf "${BOLD}Too Many Iteration$RESET	: $TMI\n"
