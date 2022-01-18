@@ -2,7 +2,7 @@
 This tester is my first ever bash script, if something does not work correctly, feel free to mention it to me !
 
 ### How to use it ?
-1. git clone https://github.com/Arkhavy/Push_Swap_arktester.git where your binary is located
+1. git clone https://github.com/Arkhavy/Ark_Push_Swap_Tester.git where your binary is located
 2. Make sure your checker and your binary exist
 3. Rename the checker in the script if needed *(default is checker_Mac)*
 4. cd Push_Swap_arktester
