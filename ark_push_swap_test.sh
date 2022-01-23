@@ -1,17 +1,7 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    ark_push_swap_test.sh                              :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: ljohnson <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2021/12/31 16:10:32 by ljohnson          #+#    #+#              #
-#    Updated: 2022/01/05 16:55:01 by ljohnson         ###   ########lyon.fr    #
-#                                                                              #
-# **************************************************************************** #
-
 #!/bin/bash
+
 # Just a script to test combinations of digits for Push_Swap
+# Made by Arkhavy | ljohnson@student.42lyon.fr
 
 NAME="../push_swap"
 CHECKER="./checker_Mac"
