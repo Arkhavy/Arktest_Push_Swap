@@ -12,7 +12,7 @@
 | Option | Name | Description |
 | --- | --- | --- |
 | `-h`| Help | Display help and exit. |
-| `-i`| Info | Display scores informations about results of tests and exit. |
+| `-i`| Info | Display informations about results of tests and exit. |
 | `-p`| Parsing tests | Do parsing tests *(42 tests)* |
 | `-s` | Small tests | Do 3 and 5 digits tests *(126 tests)* |
 | `-m` | Medium tests | Do 100 digits tests *(500 tests)* |
