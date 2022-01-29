@@ -1,0 +1,56 @@
+.TH Ark_Push_Swap_Tester "" "January 29 2022"
+
+.SH NAME
+.BR Ark_Push_Swap_Tester " -- Tester for Push Swap project"
+
+.SH SYNOPSIS
+.BR ./arktest.sh
+.RI [ "options ..." ]
+
+.SH DESCRIPTION
+This tester is made for the 42 project Push Swap
+
+.SH OPTIONS
+Add successively all options of your choice, in the order wanted.
+
+.TP
+.I "Example :"
+.br
+ ./arktest.sh -s -om -p
+ ./arktest.sh -l -m -s
+
+.TP
+.I "Available options :"
+.TP
+.BR -h
+Display help and exit.
+.TP
+.BR -i
+Display informations about results of tests and exit.
+.TP
+.BR -p
+Do parsing tests (42 tests)
+.TP
+.BR -s
+Do 3 and 5 digits tests (126 tests)
+.TP
+.BR -m
+Do 100 digits tests (500 tests)
+.TP
+.BR -l
+Do 500 digits tests (500 tests)
+.TP
+.BR -os
+Do Small tests + 4, 6, 7, 8 and 9 digits tests (2370 tests)
+.TP
+.BR -om
+Do Medium tests + 10, 25, 50 and 75 digits tests (2500 tests)
+.TP
+.BR -ol
+Do Large tests + 200, 300, 400 digits tests (2000 tests)
+
+.SH NOTE
+This tester is still WiP, TimeOut, Leaks, Crash and Norm tests are not done yet.
+
+.SH BUGS AND FEEDBACK
+For any bug report or feedback, feel free to contact ljohnson@student.42lyon.fr
