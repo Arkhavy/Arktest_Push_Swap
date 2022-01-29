@@ -9,8 +9,6 @@
 6. Brace yourself
 
 ### The tester has flags !
-- If you launch the script without flags, it will do all tests (Currently 6912 tests, it might take some time)
-- You can use different flags to do only some tests and not all of them ! <br>
 | Option | Name | Description |
 | --- | --- | --- |
 | `-h`| Help | Display help and exit. |
@@ -23,6 +21,8 @@
 | `-om` | Opt and medium tests | Do Medium tests + 10, 25, 50 and 75 digits tests *(2500 tests)* |
 | `-ol` | Opt and large tests | Do Large tests + 200, 300, 400 digits tests *(2000 tests)* |
 
+- If you launch the script without flags, it will do all tests (Currently 6912 tests, it might take some time)
+- You can use different flags to do only some tests and not all of them !
 - You can use multiple flags at the same time !
 	- `./arktest.sh -p -s -ol` as example will then do **parsing, 3, 5, 200, 300, 400, 500** digits tests !
 
