@@ -60,7 +60,7 @@ big_tests()
 				BEST="$N"
 				LBEST="$v"
 			fi
-			if [[ $WORST -eq 0 || $N -le $WORST ]]
+			if [[ $WORST -eq 0 || $N -ge $WORST ]]
 			then
 				WORST="$N"
 				LWORST="$v"
