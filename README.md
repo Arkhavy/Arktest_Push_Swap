@@ -10,7 +10,7 @@
 
 ### The tester has flags !
 - If you launch the script without flags, it will do all tests (Currently 6912 tests, it might take some time)
-- You can use different flags to do only some tests and not all of them !
+- You can use different flags to do only some tests and not all of them ! <br>
 | Option | Name | Description |
 | --- | --- | --- |
 | `-h`| Help | Display help and exit. |
