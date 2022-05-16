@@ -35,6 +35,7 @@
 
 ## ATTENTION
 - The script is currently a Work In Progress
+- If the script displays anything weird, you might display something weird yourself with your program (if not, please contact me)
 - There is currently 6912 tests done, hope your body is ready *(and your terminal too)*
 - Norm test, leak tests, crash tests and timeout tests are currently non existent, they will be added in the future
 - Since timeout test does not exist yet, **if the script get stuck in an infinite loop**, it's your fault !
