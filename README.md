@@ -1,10 +1,10 @@
 # Push_Swap Arktester
 
 ### How to use it ?
-1. `git clone https://github.com/Arkhavy/Ark_Push_Swap_Tester.git` where your binary is located
+1. `git clone https://github.com/Arkhavy/Arktest_Push_Swap.git` where your binary is located
 2. Make sure your checker and your binary exist
 3. Rename the checker in the script if needed *(default is checker_Mac)*
-4. `cd Ark_Push_Swap_Tester`
+4. `cd Arktest_Push_Swap`
 5. `./arktest.sh`
 6. Brace yourself
 
