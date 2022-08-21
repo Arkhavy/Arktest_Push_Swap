@@ -29,7 +29,7 @@ big_tests()
 		if [ $CHECK = "KO" ]
 		then
 			echo "CKO = $COMB" >> $FTR
-			printf "$v.CKO"
+			printf "$v.$CKO"
 		elif [ $CHECK = "Error" ]
 		then
 			echo "CERR = $COMB" >> $FTR
