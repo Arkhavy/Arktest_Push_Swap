@@ -4,7 +4,7 @@
 
 # If you named your binary or if you have a different checker, you can change those two
 NAME="../push_swap"
-CHECKER="./checker_Mac"
+CHECKER="./checker_linux"
 
 # Don't change this one otherwise nothing will work correctly
 ARKPATH="$(cd "$(dirname "$0")" && pwd -P)"
